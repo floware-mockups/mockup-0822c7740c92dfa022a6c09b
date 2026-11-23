@@ -30,8 +30,9 @@
         "Tipo",
         "Sito",
         "Tecnico",
-        "Scadenza",
-        "Stato"
+        "Data di attivazione",
+        "Stato",
+        "Scadenza"
       ],
       "rows": [
         [
@@ -39,40 +40,45 @@
           "Bonifica",
           "Area Nubi",
           "Lumo Verri",
-          "2025-10-08",
-          "Parere in attesa"
+          "2025-09-08",
+          "Parere in attesa",
+          "2026-01-06"
         ],
         [
           "BON-2025-019",
           "Controllo finale",
           "Campo Vela",
           "Neri Soli",
-          "2025-10-12",
-          "Relazione da verificare"
+          "2025-09-12",
+          "Relazione da verificare",
+          "2026-01-10"
         ],
         [
           "BON-2025-023",
           "Bonifica",
           "Lotto Brina",
           "Tavi Runo",
-          "2025-10-16",
-          "Lavori in corso"
+          "2025-09-16",
+          "Lavori in corso",
+          "2026-01-14"
         ],
         [
           "BON-2025-027",
           "Certificazione",
           "Riva Lume",
           "Mira Dori",
-          "2025-10-21",
-          "Da chiudere"
+          "2025-09-21",
+          "Da chiudere",
+          "2026-01-19"
         ],
         [
           "BON-2025-031",
           "Controllo finale",
           "Piana Seta",
           "Lumo Verri",
-          "2025-10-25",
-          "Richiesta relazione"
+          "2025-09-25",
+          "Richiesta relazione",
+          "2026-01-23"
         ]
       ],
       "form": [
@@ -80,8 +86,9 @@
         "Tipo",
         "Sito",
         "Tecnico",
-        "Scadenza",
-        "Stato"
+        "Data di attivazione",
+        "Stato",
+        "Scadenza"
       ]
     },
     {
@@ -112,7 +119,7 @@
           "Parere tecnico",
           "Consorzio Lume",
           "2025-09-18",
-          "2025-10-08",
+          "2026-01-06",
           "In attesa"
         ],
         [
@@ -120,7 +127,7 @@
           "Verifica relazione",
           "Ufficio Vela",
           "2025-09-22",
-          "2025-10-12",
+          "2026-01-10",
           "Da avviare"
         ],
         [
@@ -128,7 +135,7 @@
           "Controllo lavori",
           "Squadra Nubi",
           "2025-09-24",
-          "2025-10-16",
+          "2026-01-14",
           "Programmato"
         ],
         [
@@ -136,7 +143,7 @@
           "Richiesta relazione",
           "Centro Brina",
           "2025-09-25",
-          "2025-10-25",
+          "2026-01-23",
           "In attesa"
         ]
       ],
@@ -177,7 +184,7 @@
           "Sollecitare parere",
           "Area Nubi",
           "Lumo Verri",
-          "2025-10-03",
+          "2026-01-01",
           "Da fare"
         ],
         [
@@ -185,7 +192,7 @@
           "Verificare relazione",
           "Campo Vela",
           "Neri Soli",
-          "2025-10-05",
+          "2026-01-03",
           "Da fare"
         ],
         [
@@ -193,7 +200,7 @@
           "Controllare avanzamento",
           "Lotto Brina",
           "Tavi Runo",
-          "2025-10-09",
+          "2026-01-07",
           "Programmato"
         ],
         [
@@ -201,7 +208,7 @@
           "Preparare certificazione",
           "Riva Lume",
           "Mira Dori",
-          "2025-10-14",
+          "2026-01-12",
           "Da fare"
         ],
         [
@@ -209,7 +216,7 @@
           "Richiedere relazione",
           "Piana Seta",
           "Lumo Verri",
-          "2025-10-18",
+          "2026-01-16",
           "In ritardo"
         ]
       ],
@@ -221,10 +228,114 @@
         "Scadenza",
         "Stato"
       ]
+    },
+    {
+      "id": "sospensione-termini",
+      "title": "Sospensione termini",
+      "description": "Registra la richiesta di integrazioni e la ripresa dei termini per monitorare il tempo residuo delle pratiche.",
+      "metrics": [
+        {
+          "label": "Pratiche sospese",
+          "value": "2"
+        },
+        {
+          "label": "Termini ripresi",
+          "value": "4"
+        },
+        {
+          "label": "Tempo residuo medio",
+          "value": "11 giorni"
+        }
+      ],
+      "columns": [
+        "Pratica",
+        "Data inizio termini",
+        "Termine disponibile (giorni)",
+        "Data richiesta integrazioni",
+        "Data ripresa termini",
+        "Tempo residuo",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "BON-2025-014",
+          "2025-09-08",
+          "180",
+          "12/01/2026",
+          "20/01/2026",
+          "18 giorni",
+          "In corso"
+        ],
+        [
+          "BON-2025-019",
+          "2025-09-12",
+          "180",
+          "14/01/2026",
+          "22/01/2026",
+          "12 giorni",
+          "In corso"
+        ],
+        [
+          "BON-2025-023",
+          "2025-09-16",
+          "180",
+          "16/01/2026",
+          "—",
+          "—",
+          "Sospesa"
+        ],
+        [
+          "BON-2025-027",
+          "2025-09-21",
+          "180",
+          "18/01/2026",
+          "25/01/2026",
+          "9 giorni",
+          "In corso"
+        ],
+        [
+          "BON-2025-031",
+          "2025-09-25",
+          "180",
+          "20/01/2026",
+          "—",
+          "—",
+          "Sospesa"
+        ],
+        [
+          "BON-2025-034",
+          "2025-09-28",
+          "180",
+          "22/01/2026",
+          "29/01/2026",
+          "6 giorni",
+          "In corso"
+        ]
+      ],
+      "form": [
+        "Pratica",
+        "Data inizio termini",
+        "Termine disponibile (giorni)",
+        "Data richiesta integrazioni",
+        "Data ripresa termini",
+        "Tempo residuo",
+        "Stato"
+      ],
+      "statusColumn": 6
     }
   ],
   "theme": {
     "palette": "verde-oliva",
     "fonts": "moderno"
-  }
+  },
+  "custom": [
+    {
+      "name": "CalcoloTerminiSospesi",
+      "title": "Calcolo dei termini",
+      "description": "Aggiornamento automatico del residuo e modifica delle date di sospensione e ripresa.",
+      "role": "section",
+      "pageId": "sospensione-termini",
+      "position": "top"
+    }
+  ]
 }
