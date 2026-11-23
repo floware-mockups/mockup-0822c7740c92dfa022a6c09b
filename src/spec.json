@@ -322,6 +322,79 @@
         "Stato"
       ],
       "statusColumn": 6
+    },
+    {
+      "id": "report-annuale",
+      "title": "Report annuale",
+      "description": "Base dimostrativa per l’analisi annuale dei tempi di istruttoria, delle sospensioni e delle pratiche per fase.",
+      "metrics": [
+        {
+          "label": "Pratiche di esempio",
+          "value": "6"
+        },
+        {
+          "label": "Fasi rappresentate",
+          "value": "4"
+        }
+      ],
+      "columns": [
+        "Anno",
+        "Pratica",
+        "Fase",
+        "Tempo istruttoria (giorni)",
+        "Tempo sospensione (giorni)"
+      ],
+      "rows": [
+        [
+          "2025",
+          "BON-2025-014",
+          "Parere tecnico",
+          "42",
+          "8"
+        ],
+        [
+          "2025",
+          "BON-2025-019",
+          "Verifica relazione",
+          "36",
+          "8"
+        ],
+        [
+          "2025",
+          "BON-2025-023",
+          "Controllo lavori",
+          "51",
+          "0"
+        ],
+        [
+          "2025",
+          "BON-2025-027",
+          "Certificazione",
+          "29",
+          "7"
+        ],
+        [
+          "2025",
+          "BON-2025-031",
+          "Richiesta relazione",
+          "44",
+          "0"
+        ],
+        [
+          "2025",
+          "BON-2025-034",
+          "Controllo lavori",
+          "33",
+          "7"
+        ]
+      ],
+      "form": [
+        "Anno",
+        "Pratica",
+        "Fase",
+        "Tempo istruttoria (giorni)",
+        "Tempo sospensione (giorni)"
+      ]
     }
   ],
   "theme": {
@@ -335,6 +408,14 @@
       "description": "Aggiornamento automatico del residuo e modifica delle date di sospensione e ripresa.",
       "role": "section",
       "pageId": "sospensione-termini",
+      "position": "top"
+    },
+    {
+      "name": "ReportTempiAnnuali",
+      "title": "Report calcolato delle pratiche",
+      "description": "Medie dinamiche, distribuzione per fase e totali per anno di attivazione.",
+      "role": "section",
+      "pageId": "report-annuale",
       "position": "top"
     }
   ]
