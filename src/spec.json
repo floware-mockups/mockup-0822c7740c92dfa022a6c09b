@@ -1,0 +1,230 @@
+{
+  "title": "Gestione delle bonifiche ambientali",
+  "description": "Segui le fasi delle pratiche, le richieste di parere e i tempi fino alla certificazione.",
+  "accent": "emerald",
+  "pages": [
+    {
+      "id": "quadro-pratiche",
+      "title": "Quadro pratiche",
+      "description": "Controlla scadenze, attività da fare e pratiche in corso.",
+      "metrics": [
+        {
+          "label": "Pratiche aperte",
+          "value": "12"
+        },
+        {
+          "label": "Controlli del mese",
+          "value": "4"
+        },
+        {
+          "label": "Autorizzazioni in scadenza",
+          "value": "3"
+        },
+        {
+          "label": "Segnalazioni da chiudere",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Pratica",
+        "Tipo",
+        "Sito",
+        "Tecnico",
+        "Scadenza",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "BON-2025-014",
+          "Bonifica",
+          "Area Nubi",
+          "Lumo Verri",
+          "2025-10-08",
+          "Parere in attesa"
+        ],
+        [
+          "BON-2025-019",
+          "Controllo finale",
+          "Campo Vela",
+          "Neri Soli",
+          "2025-10-12",
+          "Relazione da verificare"
+        ],
+        [
+          "BON-2025-023",
+          "Bonifica",
+          "Lotto Brina",
+          "Tavi Runo",
+          "2025-10-16",
+          "Lavori in corso"
+        ],
+        [
+          "BON-2025-027",
+          "Certificazione",
+          "Riva Lume",
+          "Mira Dori",
+          "2025-10-21",
+          "Da chiudere"
+        ],
+        [
+          "BON-2025-031",
+          "Controllo finale",
+          "Piana Seta",
+          "Lumo Verri",
+          "2025-10-25",
+          "Richiesta relazione"
+        ]
+      ],
+      "form": [
+        "Pratica",
+        "Tipo",
+        "Sito",
+        "Tecnico",
+        "Scadenza",
+        "Stato"
+      ]
+    },
+    {
+      "id": "fasi-e-pareri",
+      "title": "Fasi e pareri",
+      "description": "Registra ogni passaggio e tieni traccia delle richieste inviate e delle risposte attese.",
+      "metrics": [
+        {
+          "label": "Pareri in attesa",
+          "value": "5"
+        },
+        {
+          "label": "Scadenze entro 7 giorni",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Pratica",
+        "Fase",
+        "Destinatario",
+        "Richiesta",
+        "Risposta attesa",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "BON-2025-014",
+          "Parere tecnico",
+          "Consorzio Lume",
+          "2025-09-18",
+          "2025-10-08",
+          "In attesa"
+        ],
+        [
+          "BON-2025-019",
+          "Verifica relazione",
+          "Ufficio Vela",
+          "2025-09-22",
+          "2025-10-12",
+          "Da avviare"
+        ],
+        [
+          "BON-2025-023",
+          "Controllo lavori",
+          "Squadra Nubi",
+          "2025-09-24",
+          "2025-10-16",
+          "Programmato"
+        ],
+        [
+          "BON-2025-031",
+          "Richiesta relazione",
+          "Centro Brina",
+          "2025-09-25",
+          "2025-10-25",
+          "In attesa"
+        ]
+      ],
+      "form": [
+        "Pratica",
+        "Fase",
+        "Destinatario",
+        "Richiesta",
+        "Risposta attesa",
+        "Stato"
+      ]
+    },
+    {
+      "id": "scadenze-e-controlli",
+      "title": "Scadenze e controlli",
+      "description": "Individua gli appuntamenti vicini e gli elementi che richiedono un controllo.",
+      "metrics": [
+        {
+          "label": "Controlli da fare",
+          "value": "4"
+        },
+        {
+          "label": "Scadenze superate",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Pratica",
+        "Attività",
+        "Sito",
+        "Responsabile",
+        "Scadenza",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "BON-2025-014",
+          "Sollecitare parere",
+          "Area Nubi",
+          "Lumo Verri",
+          "2025-10-03",
+          "Da fare"
+        ],
+        [
+          "BON-2025-019",
+          "Verificare relazione",
+          "Campo Vela",
+          "Neri Soli",
+          "2025-10-05",
+          "Da fare"
+        ],
+        [
+          "BON-2025-023",
+          "Controllare avanzamento",
+          "Lotto Brina",
+          "Tavi Runo",
+          "2025-10-09",
+          "Programmato"
+        ],
+        [
+          "BON-2025-027",
+          "Preparare certificazione",
+          "Riva Lume",
+          "Mira Dori",
+          "2025-10-14",
+          "Da fare"
+        ],
+        [
+          "BON-2025-031",
+          "Richiedere relazione",
+          "Piana Seta",
+          "Lumo Verri",
+          "2025-10-18",
+          "In ritardo"
+        ]
+      ],
+      "form": [
+        "Pratica",
+        "Attività",
+        "Sito",
+        "Responsabile",
+        "Scadenza",
+        "Stato"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "verde-oliva",
+    "fonts": "moderno"
+  }
+}
