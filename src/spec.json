@@ -398,8 +398,8 @@
     }
   ],
   "theme": {
-    "palette": "verde-oliva",
-    "fonts": "moderno"
+    "palette": "rosso-civico",
+    "fonts": "istituzionale"
   },
   "custom": [
     {
