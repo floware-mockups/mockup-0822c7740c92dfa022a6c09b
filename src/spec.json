@@ -425,6 +425,14 @@
       "role": "section",
       "pageId": "quadro-pratiche",
       "position": "top"
+    },
+    {
+      "name": "ScadenzaImminente",
+      "title": "Scadenze entro 7 giorni",
+      "description": "Evidenzia in rosso le scadenze da oggi fino al settimo giorno incluso.",
+      "role": "cell",
+      "pageId": "quadro-pratiche",
+      "column": "Scadenza"
     }
   ]
 }
