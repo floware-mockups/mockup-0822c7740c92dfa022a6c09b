@@ -2,7 +2,8 @@
 import { customTicker, customTimers } from "../customGuard.ts";
 const __mk = customTicker("ScadenzaImminente");
 const { setTimeout, setInterval, clearTimeout, clearInterval } = customTimers("ScadenzaImminente");
-import { useTable, Badge } from "../floware";
+import { useEffect } from "react";
+import { Select, Badge, useTable } from "../floware";
 
 function leggiData(testo) {__mk();
  const s = String(testo || "").trim();
@@ -11,23 +12,51 @@ function leggiData(testo) {__mk();
  if (p.length !== 3) return null;
  const ia = italiana ? 2 : 0;
  const ig = italiana ? 0 : 2;
- const a = Number(p[ia]);
- const m = Number(p[1]);
- const g = Number(p[ig]);
+ const a = Number(p[ia]), m = Number(p[1]), g = Number(p[ig]);
  if (!Number.isInteger(a) || a < 1900 || a > 2200 || !Number.isInteger(m) || !Number.isInteger(g)) return null;
  const d = new Date(Date.UTC(a, m - 1, g));
  if (d.getUTCFullYear() !== a || d.getUTCMonth() !== m - 1 || d.getUTCDate() !== g) return null;
- return d.getTime() / 86400000;
+ return d.getTime();
+}
+
+function durata(testo) {__mk();
+ const n = Number(String(testo || "").replaceAll("giorni", "").trim());
+ return [30, 60, 90].includes(n) ? n : null;
+}
+
+function scadenza(inizio, giorni) {__mk();
+ const data = leggiData(inizio);
+ if (data === null || giorni === null) return "";
+ return new Date(data + giorni * 86400000).toISOString().slice(0, 10);
 }
 
 export default function ScadenzaImminente({ pageId, rowIndex, value }) {__mk();
  const table = useTable(pageId);
- if (!table || table.column("Scadenza") < 0 || !table.rows[rowIndex]) return <span>{value}</span>;
- const fine = leggiData(table.value(rowIndex, "Scadenza"));
+ const pronto = table && ["Data di attivazione", "Scadenza", "Giorni di istruttoria"].every(c => (__mk(), table.column(c) >= 0)) && Boolean(table.rows[rowIndex]);
+ const inizio = pronto ? table.value(rowIndex, "Data di attivazione") : "";
+ const corrente = pronto ? table.value(rowIndex, "Giorni di istruttoria") : value;
+ const giorni = durata(corrente);
+ const fine = scadenza(inizio, giorni);
+ const salvata = pronto ? table.value(rowIndex, "Scadenza") : "";
+ useEffect(() => {__mk();
+  if (table && pronto && fine && salvata !== fine) table.setCell(rowIndex, "Scadenza", fine);
+ }, [table, pronto, rowIndex, fine, salvata]);
+ if (!table || !pronto) return <span>{value}</span>;
+ const aggiorna = testo => {__mk();
+  const n = durata(testo);
+  if (n === null) return;
+  table.setCell(rowIndex, "Giorni di istruttoria", String(n) + " giorni");
+  const nuova = scadenza(inizio, n);
+  if (nuova) table.setCell(rowIndex, "Scadenza", nuova);
+ };
  const adesso = new Date();
- const oggi = Date.UTC(adesso.getFullYear(), adesso.getMonth(), adesso.getDate()) / 86400000;
- const giorni = fine === null ? null : fine - oggi;
- const imminente = giorni !== null && giorni >= 0 && giorni <= 7;
- if (!imminente) return <span>{value}</span>;
- return <div className="space-y-1 text-(--mk-danger)"><strong>{value}</strong><div><Badge tone="danger">{giorni === 0 ? "Scade oggi" : giorni === 1 ? "Scade domani" : "Scade tra " + String(giorni) + " giorni"}</Badge></div></div>;
+ const oggi = Date.UTC(adesso.getFullYear(), adesso.getMonth(), adesso.getDate());
+ const distanza = fine ? (leggiData(fine) - oggi) / 86400000 : null;
+ const opzioni = [{value:"30", label:"30 giorni"}, {value:"60", label:"60 giorni"}, {value:"90", label:"90 giorni"}];
+ return <div className="space-y-2">
+  <span className="text-xs text-(--mk-muted)">{value || "Durata da scegliere"}</span>
+  <Select label="Giorni di istruttoria" value={giorni === null ? "" : String(giorni)} options={giorni === null ? [{value:"", label:"Scegli la durata"}, ...opzioni] : opzioni} onChange={aggiorna} />
+  {!fine && <p className="text-xs text-(--mk-muted)">{giorni === null ? "Scegliere una durata per calcolare la scadenza." : "Data di attivazione mancante o non valida: scadenza non aggiornata."}</p>}
+  {distanza !== null && distanza >= 0 && distanza <= 7 && <Badge tone="danger">{distanza === 0 ? "Scade oggi" : distanza === 1 ? "Scade domani" : "Scade tra " + String(distanza) + " giorni"}</Badge>}
+ </div>;
 }

@@ -32,7 +32,8 @@
         "Tecnico",
         "Data di attivazione",
         "Stato",
-        "Scadenza"
+        "Scadenza",
+        "Giorni di istruttoria"
       ],
       "rows": [
         [
@@ -42,7 +43,8 @@
           "Lumo Verri",
           "2025-09-08",
           "Parere in attesa",
-          "2026-01-06"
+          "2025-10-08",
+          "30 giorni"
         ],
         [
           "BON-2025-019",
@@ -51,7 +53,8 @@
           "Neri Soli",
           "2025-09-12",
           "Relazione da verificare",
-          "2026-01-10"
+          "2025-11-11",
+          "60 giorni"
         ],
         [
           "BON-2025-023",
@@ -60,7 +63,8 @@
           "Tavi Runo",
           "2025-09-16",
           "Lavori in corso",
-          "2026-01-14"
+          "2025-12-15",
+          "90 giorni"
         ],
         [
           "BON-2025-027",
@@ -69,7 +73,8 @@
           "Mira Dori",
           "2025-09-21",
           "Da chiudere",
-          "2026-01-19"
+          "2025-10-21",
+          "30 giorni"
         ],
         [
           "BON-2025-031",
@@ -78,7 +83,8 @@
           "Lumo Verri",
           "2025-09-25",
           "Richiesta relazione",
-          "2026-01-23"
+          "2025-11-24",
+          "60 giorni"
         ]
       ],
       "form": [
@@ -428,11 +434,11 @@
     },
     {
       "name": "ScadenzaImminente",
-      "title": "Scadenze entro 7 giorni",
-      "description": "Evidenzia in rosso le scadenze da oggi fino al settimo giorno incluso.",
+      "title": "Durata e scadenza automatica",
+      "description": "Scelta della durata e ricalcolo della scadenza della stessa riga, con avviso entro sette giorni.",
       "role": "cell",
       "pageId": "quadro-pratiche",
-      "column": "Scadenza"
+      "column": "Giorni di istruttoria"
     }
   ]
 }
