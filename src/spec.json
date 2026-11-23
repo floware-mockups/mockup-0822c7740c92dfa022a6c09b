@@ -29,7 +29,6 @@
         "Pratica",
         "Tipo",
         "Sito",
-        "Tecnico",
         "Data di attivazione",
         "Stato",
         "Scadenza",
@@ -40,7 +39,6 @@
           "BON-2025-014",
           "Bonifica",
           "Area Nubi",
-          "Lumo Verri",
           "2025-09-08",
           "Parere in attesa",
           "2025-10-08",
@@ -50,7 +48,6 @@
           "BON-2025-019",
           "Controllo finale",
           "Campo Vela",
-          "Neri Soli",
           "2025-09-12",
           "Relazione da verificare",
           "2025-11-11",
@@ -60,7 +57,6 @@
           "BON-2025-023",
           "Bonifica",
           "Lotto Brina",
-          "Tavi Runo",
           "2025-09-16",
           "Lavori in corso",
           "2025-12-15",
@@ -70,7 +66,6 @@
           "BON-2025-027",
           "Certificazione",
           "Riva Lume",
-          "Mira Dori",
           "2025-09-21",
           "Da chiudere",
           "2025-10-21",
@@ -80,7 +75,6 @@
           "BON-2025-031",
           "Controllo finale",
           "Piana Seta",
-          "Lumo Verri",
           "2025-09-25",
           "Richiesta relazione",
           "2025-11-24",
@@ -91,7 +85,6 @@
         "Pratica",
         "Tipo",
         "Sito",
-        "Tecnico",
         "Data di attivazione",
         "Stato",
         "Scadenza",
@@ -181,7 +174,6 @@
         "Pratica",
         "Attività",
         "Sito",
-        "Responsabile",
         "Scadenza",
         "Stato"
       ],
@@ -190,7 +182,6 @@
           "BON-2025-014",
           "Sollecitare parere",
           "Area Nubi",
-          "Lumo Verri",
           "2026-01-01",
           "Da fare"
         ],
@@ -198,7 +189,6 @@
           "BON-2025-019",
           "Verificare relazione",
           "Campo Vela",
-          "Neri Soli",
           "2026-01-03",
           "Da fare"
         ],
@@ -206,7 +196,6 @@
           "BON-2025-023",
           "Controllare avanzamento",
           "Lotto Brina",
-          "Tavi Runo",
           "2026-01-07",
           "Programmato"
         ],
@@ -214,7 +203,6 @@
           "BON-2025-027",
           "Preparare certificazione",
           "Riva Lume",
-          "Mira Dori",
           "2026-01-12",
           "Da fare"
         ],
@@ -222,7 +210,6 @@
           "BON-2025-031",
           "Richiedere relazione",
           "Piana Seta",
-          "Lumo Verri",
           "2026-01-16",
           "In ritardo"
         ]
@@ -231,7 +218,6 @@
         "Pratica",
         "Attività",
         "Sito",
-        "Responsabile",
         "Scadenza",
         "Stato"
       ]
@@ -436,10 +422,10 @@
     {
       "name": "ScadenzaImminente",
       "title": "Durata e scadenza automatica",
-      "description": "Durata numerica e ricalcolo della scadenza della stessa riga.",
-      "role": "cell",
+      "description": "Aggiorna i giorni trascorsi per ogni riga, indipendentemente dalla durata prevista per la scadenza.",
+      "role": "section",
       "pageId": "quadro-pratiche",
-      "column": "Giorni di istruttoria"
+      "position": "bottom"
     }
   ]
 }
