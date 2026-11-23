@@ -417,6 +417,14 @@
       "role": "section",
       "pageId": "report-annuale",
       "position": "top"
+    },
+    {
+      "name": "GanttPratiche",
+      "title": "Gantt delle pratiche",
+      "description": "Cronologia con filtri per stato, date e scadenze ordinate.",
+      "role": "section",
+      "pageId": "quadro-pratiche",
+      "position": "top"
     }
   ]
 }
